@@ -4,32 +4,66 @@ body{
     margin: 0;
 }
 
-.navright{
+ol, ul {
+    padding: 0px;
     text-align: center;
 }
 
-.nav{
-    width: 100%;
-    height: 40px;
-}
-
-.nav a{
+li {
     display: inline-block;
-    padding: 7px;
-    border-radius: 10px;
-    text-decoration: none;
-    color: rgba(0, 0, 0, 0.562);
-    font-family: 'Raleway', sans-serif;
-    font-size: 20px;
+    vertical-align: middle;
 }
 
-.nav a:hover{
-    text-decoration: underline 1.5px;
-    transition-duration: 300ms;
+a:hover, a:focus, a:active {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+}
+
+a {
+    font-family: 'Raleway', sans-serif;
+    text-decoration: none;
+    transition: color 0.1s, background-color 0.1s;
+}
+
+a {
+    margin: 10px;
+    position: relative;
+    display: block;
+    padding: 16px 0;
+    letter-spacing: 3px;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: color 0.1s,background-color 0.2s,padding 0.3s ease-in;
+    color: rgba(0, 0, 0, 0.486);
+}
+
+a::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 3px;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    background-color: #000;
+    transform-origin: right top;
+    transform: scale(0, 1);
+    transition: color 0.2s,transform 0.3s ease-out;
+}
+
+a:active::before {
+    background-color: #000;
+}
+
+a:hover::before, a:focus::before {
+    transform-origin: left top;
+    transform: scale(1, 1);
 }
 
 .active{
-    background-color: rgba(134, 134, 134, 0.055);
+    color: rgb(0, 0, 0);
     transition-duration: 300ms;
 }
 
@@ -45,6 +79,7 @@ body{
 }
 
 .hometext{
+    font-family: 'Raleway', sans-serif;
     height: 1000px;
     margin-left: 5%;
     margin-right: 5%;
@@ -53,6 +88,12 @@ body{
 .hometext1{
     width: 50%;
     word-wrap: break-word;
+}
+
+.footer{
+    background-color: rgba(0, 0, 0, 0.068);
+    height: 80px;
+    width: 100%;
 }
 
 @media only screen and (max-width: 400px) {
